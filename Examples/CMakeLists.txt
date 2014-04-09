@@ -12,6 +12,9 @@ if(USE_DCMTK AND DCMTK_charls_LIBRARY)
  set(BASE_LIBS ${BASE_LIBS} ${DCMTK_charls_LIBRARY})
 endif()
 
+add_executable(DICOMRewriter DICOMRewriter.cxx)
+target_link_libraries(DICOMRewriter vtkDICOM ${BASE_LIBS} ${KWSYS_LIBS})
+
 add_executable(TestDICOMCompiler TestDICOMCompiler.cxx)
 target_link_libraries(TestDICOMCompiler ${BASE_LIBS} ${KWSYS_LIBS})
 
