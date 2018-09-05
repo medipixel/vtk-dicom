@@ -47,6 +47,10 @@
 
 #include <limits>
 
+#ifndef _P_WAIT
+    #define _P_WAIT (0)
+#endif
+
 // print the version
 void dicomfind_version(FILE *file, const char *cp)
 {
